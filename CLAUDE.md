@@ -6,6 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 "Meus Hábitos" — a client-only daily habit tracker (React 18 + TypeScript + Vite, tests with Vitest). No backend: all data lives in the browser's `localStorage`. UI text, code comments and test names are in Brazilian Portuguese; keep new ones in Portuguese too.
 
+## Git: commit e push a cada mudança
+
+O usuário quer poder voltar tudo ao normal sempre que algo der errado. Por isso:
+
+- Faça commit no git de **todas** as mudanças, com uma mensagem clara em português que diga o que mudou e por quê.
+- Um commit por mudança lógica. Não junte alterações sem relação no mesmo commit.
+- Antes de cada commit, rode `npm test` e `npm run build`. Só faça commit se os dois passarem, para que todo ponto do histórico seja uma versão que funciona.
+- Envie (`git push`) para `origin main` logo após cada commit. Repositório (privado): https://github.com/ClaudioFlaviano/habit-tracker
+- Não é preciso pedir permissão para commitar ou enviar.
+- Se algo der errado, ofereça restaurar uma versão anterior. Prefira `git revert` (que mantém o histórico) a reescrever o histórico (`reset --hard`, `push --force`), e só reescreva com autorização explícita.
+
 ## Commands
 
 ```bash
